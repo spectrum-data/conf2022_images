@@ -3,7 +3,7 @@
  * самые очевидные недоразвитости базовой библиотеки
  */
 
-package codes.sepctrum.conf2022.img_analyzer
+package codes.sepctrum.conf2022.images.common
 
 import java.awt.Color
 import java.awt.image.BufferedImage
@@ -13,9 +13,9 @@ import java.awt.image.BufferedImage
  * Получить автономный клон изображения, если просто взять subImage
  * то будет просто ссылка на исходное изображение
  */
-fun ImageAnaylyzerFacade.clone(): BufferedImage {
-    val result = BufferedImage(image.width, image.height, image.type)
-    result.graphics.drawImage(image, 0, 0, null)
+fun BufferedImage.exClone(): BufferedImage {
+    val result = BufferedImage(width, height, type)
+    result.graphics.drawImage(this, 0, 0, null)
     return result
 }
 
@@ -30,6 +30,7 @@ operator fun BufferedImage.get(x: Int, y: Int): Int = this.getRGB(x, y)
  * даже не стал в extra помещать - настолько очевидная задача
  */
 operator fun BufferedImage.set(x: Int, y: Int, color: Color) = this.setRGB(x, y, color.rgb)
+
 /**
  * Позволяет вместо `image.setRGB(x, y, int)` делать просто `image[x, y] = int
  * даже не стал в extra помещать - настолько очевидная задача

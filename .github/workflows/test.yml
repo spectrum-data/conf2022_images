@@ -18,16 +18,10 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
         with:
-          arguments: check
+          arguments: check benchmark
       - name: Upload build reports
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: build-reports
           path: build/reports/
-      - name: Upload image test results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-images
-          path: tmp

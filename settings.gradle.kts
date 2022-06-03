@@ -1,3 +1,3 @@
 
-rootProject.name = "image_analyzer"
+rootProject.name = "images"
 
