@@ -20,11 +20,13 @@ jobs:
         with:
           arguments: check
       - name: Upload build reports
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: build-reports
           path: build/reports/
       - name: Upload image test results
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: test-images
