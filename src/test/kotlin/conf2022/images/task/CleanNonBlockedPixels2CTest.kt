@@ -1,11 +1,12 @@
-package codes.sepctrum.conf2022.images
+package conf2022.images.task
 
-import codes.sepctrum.conf2022.images.common.ImageTestCaseBase
-import codes.sepctrum.conf2022.images.common.ImageTestSpecBase
+import codes.sepctrum.conf2022.images.cleanNonBlockedPixels2C
+import conf2022.images.common.ImageTestCaseBase
+import conf2022.images.common.ImageTestSpecBase
 import java.awt.image.BufferedImage
 import java.io.File
 
-internal class CleanNonBlockedPixelsKtTest : ImageTestSpecBase(TestCase::class) {
+internal class CleanNonBlockedPixels2CTest : ImageTestSpecBase(TestCase::class) {
     class TestCase(srcFile: File) : ImageTestCaseBase(::cleanNonBlockedPixels2C.name, srcFile) {
         override fun getTestNameExtension(): String {
             return "${minWidth}x${minHeight}px"

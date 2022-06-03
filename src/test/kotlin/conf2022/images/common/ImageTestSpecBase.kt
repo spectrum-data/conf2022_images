@@ -1,4 +1,4 @@
-package codes.sepctrum.conf2022.images.common
+package conf2022.images.common
 
 import io.kotest.core.spec.style.FunSpec
 import kotlinx.coroutines.Dispatchers

@@ -1,7 +1,7 @@
 /**
  * Тут расширения базового API, предназначенные для тестов
  */
-package codes.sepctrum.conf2022.images.common
+package conf2022.images.common
 
 import java.awt.Color
 import java.awt.image.BufferedImage

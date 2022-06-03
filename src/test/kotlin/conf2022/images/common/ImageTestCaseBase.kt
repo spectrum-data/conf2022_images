@@ -1,4 +1,4 @@
-package codes.sepctrum.conf2022.images.common
+package conf2022.images.common
 
 import io.kotest.assertions.fail
 import io.kotest.assertions.withClue

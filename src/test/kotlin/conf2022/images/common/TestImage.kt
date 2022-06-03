@@ -1,4 +1,4 @@
-package codes.sepctrum.conf2022.images.common
+package conf2022.images.common
 
 import java.awt.Color
 import java.awt.image.BufferedImage
@@ -29,7 +29,7 @@ class TestImage private constructor(private val caseImage: BufferedImage) {
         val diffStat = diffWith2C(target, expected)
         val resultImage =
             BufferedImage(
-                caseImage.width + caseImage.width + 1,
+                caseImage.width + partWidth + 1,
                 caseImage.height, BufferedImage.TYPE_INT_ARGB
             )
         val graph2 = resultImage.createGraphics()
