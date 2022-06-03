@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage
 import java.io.File
 
 internal class CleanNonBlockedPixelsKtTest : ImageTestSpecBase(TestCase::class) {
-    class TestCase(srcFile: File) : ImageTestCaseBase("cleanNonBlockedPixels2C", srcFile) {
+    class TestCase(srcFile: File) : ImageTestCaseBase(::cleanNonBlockedPixels2C.name, srcFile) {
         override fun getTestNameExtension(): String {
             return "${minWidth}x${minHeight}px"
         }
