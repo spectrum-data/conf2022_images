@@ -57,8 +57,8 @@ abstract class ImageTestSpecBase(private val caseClazz: KClass<out ImageTestCase
     }
 
     @Benchmark
-    fun specialBenchmaks() {
-        for (case in cases.filter { !it.isBenchMark }) {
+    fun specialBenchmarks() {
+        for (case in cases.filter { it.isBenchMark }) {
             case.executeBenchMark()
         }
     }
